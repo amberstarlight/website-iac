@@ -1,5 +1,5 @@
 module "bucket" {
-  source = "github.com/terraform-aws-modules/terraform-aws-s3-bucket.git?ref=v3.14.1"
+  source = "github.com/terraform-aws-modules/terraform-aws-s3-bucket.git?ref=v4.10.0"
   bucket = "website-${local.account_id}"
 
   block_public_acls       = true
@@ -23,7 +23,7 @@ data "aws_iam_policy_document" "bucket_policy" {
 }
 
 module "logs" {
-  source = "github.com/terraform-aws-modules/terraform-aws-s3-bucket.git?ref=v3.14.1"
+  source = "github.com/terraform-aws-modules/terraform-aws-s3-bucket.git?ref=v4.10.0"
 
   bucket = "logs-${local.account_id}"
   acl    = "log-delivery-write"

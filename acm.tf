@@ -1,5 +1,5 @@
 module "acm" {
-  source = "github.com/terraform-aws-modules/terraform-aws-acm.git?ref=v4.3.2"
+  source = "github.com/terraform-aws-modules/terraform-aws-acm.git?ref=v5.1.1"
 
   providers = {
     aws = aws.us_east_1

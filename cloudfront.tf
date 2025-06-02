@@ -59,8 +59,6 @@ resource "aws_cloudfront_distribution" "this" {
     bucket = module.logs.s3_bucket_bucket_domain_name
   }
 
-  web_acl_id = aws_wafv2_web_acl.this.arn
-
   depends_on = [
     module.acm.acm_certificate_arn
   ]
@@ -90,8 +88,5 @@ resource "aws_route53_record" "txt" {
   name    = var.base_domain
   type    = "TXT"
   ttl     = 3600
-  records = [
-    "v=spf1 include:spf.messagingengine.com ?all",
-    var.keybase_txt_record
-  ]
+  records = ["v=spf1 include:spf.messagingengine.com ?all"]
 }
