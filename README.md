@@ -1,6 +1,6 @@
-# website-terraform
+# website-iac
 
-Terraform for website resources on AWS
+Infrastructure-as-code for website resources on AWS
 
 <!-- BEGIN_TF_DOCS -->
 ## Requirements
@@ -8,21 +8,21 @@ Terraform for website resources on AWS
 | Name | Version |
 |------|---------|
 | <a name="requirement_terraform"></a> [terraform](#requirement\_terraform) | >= 1.5 |
-| <a name="requirement_aws"></a> [aws](#requirement\_aws) | >= 5, < 6 |
+| <a name="requirement_aws"></a> [aws](#requirement\_aws) | ~> 6.0 |
 
 ## Providers
 
 | Name | Version |
 |------|---------|
-| <a name="provider_aws"></a> [aws](#provider\_aws) | 5.99.1 |
+| <a name="provider_aws"></a> [aws](#provider\_aws) | 6.2.0 |
 
 ## Modules
 
 | Name | Source | Version |
 |------|--------|---------|
-| <a name="module_acm"></a> [acm](#module\_acm) | github.com/terraform-aws-modules/terraform-aws-acm.git | v5.1.1 |
-| <a name="module_bucket"></a> [bucket](#module\_bucket) | github.com/terraform-aws-modules/terraform-aws-s3-bucket.git | v4.10.0 |
-| <a name="module_logs"></a> [logs](#module\_logs) | github.com/terraform-aws-modules/terraform-aws-s3-bucket.git | v4.10.0 |
+| <a name="module_acm"></a> [acm](#module\_acm) | github.com/terraform-aws-modules/terraform-aws-acm.git | v6.0.0 |
+| <a name="module_bucket"></a> [bucket](#module\_bucket) | github.com/terraform-aws-modules/terraform-aws-s3-bucket.git | v5.2.0 |
+| <a name="module_logs"></a> [logs](#module\_logs) | github.com/terraform-aws-modules/terraform-aws-s3-bucket.git | v5.2.0 |
 
 ## Resources
 

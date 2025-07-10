@@ -1,12 +1,10 @@
 module "acm" {
-  source = "github.com/terraform-aws-modules/terraform-aws-acm.git?ref=v5.1.1"
-
-  providers = {
-    aws = aws.us_east_1
-  }
+  source = "github.com/terraform-aws-modules/terraform-aws-acm.git?ref=v6.0.0"
+  region = "us-east-1"
 
   domain_name               = var.base_domain
   zone_id                   = data.aws_route53_zone.this.zone_id
-  wait_for_validation       = true
+  validation_method         = "DNS"
   subject_alternative_names = ["*.${var.base_domain}"]
+  wait_for_validation       = true
 }

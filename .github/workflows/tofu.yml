@@ -1,8 +1,8 @@
-name: Apply
+name: Format, Validate, and Plan
 
 on:
   push:
-    branches:
+    branches-ignore:
       - main
 
 env:
@@ -12,10 +12,12 @@ env:
   TF_IN_AUTOMATION: 1
 
 jobs:
-  apply:
+  fmt_validate_plan:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
       - uses: opentofu/setup-opentofu@v1
       - run: tofu init
-      - run: tofu apply -auto-approve
+      - run: tofu fmt -check
+      - run: tofu validate
+      - run: tofu plan
