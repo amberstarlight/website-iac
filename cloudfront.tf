@@ -7,6 +7,9 @@ locals {
 }
 
 resource "aws_cloudfront_distribution" "this" {
+  # checkov:skip=CKV_AWS_68 "WAF not required"
+  # checkov:skip=CKV_AWS_310 "Origin failover not required"
+  # checkov:skip=CKV_AWS_374 "Geo restriction not required"
   origin {
     domain_name = module.bucket.s3_bucket_bucket_regional_domain_name
     origin_id   = local.s3_origin_id

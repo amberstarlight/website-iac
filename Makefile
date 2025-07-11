@@ -30,4 +30,4 @@ destroy: init
 
 .PHONY: checkov
 checkov:
-	LOG_LEVEL=ERROR checkov -d . --quiet --skip-check CKV_TF_2 --framework terraform
+	LOG_LEVEL=ERROR checkov --config-file .checkov.yaml
