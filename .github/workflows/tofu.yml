@@ -1,4 +1,4 @@
-name: Format, Validate, and Plan
+name: ci
 
 on: [push, workflow_dispatch]
 
