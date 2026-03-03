@@ -33,4 +33,16 @@ module "logs" {
 
   control_object_ownership = true
   object_ownership         = "ObjectWriter"
+
+  lifecycle_rule = [
+    {
+      id                                     = "logrotate"
+      enabled                                = true
+      abort_incomplete_multipart_upload_days = 1
+
+      expiration = {
+        days = 14
+      }
+    }
+  ]
 }

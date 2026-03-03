@@ -14,7 +14,7 @@ Infrastructure-as-code for website resources on AWS
 
 | Name | Version |
 |------|---------|
-| <a name="provider_aws"></a> [aws](#provider\_aws) | 6.2.0 |
+| <a name="provider_aws"></a> [aws](#provider\_aws) | 6.34.0 |
 
 ## Modules
 
